@@ -14,3 +14,5 @@ class Location:
         
     def get_location(self, wandering):
         return self.location_wandering[wandering]
+    
+    
