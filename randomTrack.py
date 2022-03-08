@@ -13,7 +13,7 @@ def walking (location, wandering, steps):
 
     for _ in range (steps):
         location.move_wandering(wandering)
-    
+        
     return begining.distancia(location.get_location(wandering))
 
 def simulate_walk (steps, number_attempt, type_warning ):
@@ -30,7 +30,7 @@ def simulate_walk (steps, number_attempt, type_warning ):
 
 def graph(x,y):
     graphics = figure(title='Camino errante', x_axis_label='pasos', y_axis_label='Distancia')
-    graphics.line(x,y, legend='Distancia')
+    graphics.line(x,y, legend_label='Distancia')
     show(graphics)
     
 def main(distancia_walk, number_attempt, type_warning):
@@ -52,5 +52,3 @@ if __name__ == '__main__':
     distancia_walk = [10, 100, 1000, 10000]
     number_attempt =100
     main(distancia_walk, number_attempt, Comunwandering)
-    
-
