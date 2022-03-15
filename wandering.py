@@ -10,7 +10,7 @@ class Wandering:
         return  (self.x, self.y)
     
     def distance_origin(self):
-        return (self.x**2, self.y**2)**0.5
+        return (self.x**2 + self.y**2)**0.5
         
 class Comunwandering(Wandering):
     def __init__(self,name):
@@ -40,7 +40,7 @@ class Leftwandering(Wandering):
         super().__init__(name)
     
     def walk(self):
-        dx, dy = random.choice([(3,2), (2,3),(5,1),(1,3)])
+        dx, dy = random.choice([(3,2), (2,3), (5,1), (1,3)])
         self.x += dx
         self.y += dy
         return [dx, dy]
